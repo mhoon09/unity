@@ -23,7 +23,7 @@ public class player : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isjump == false)
         {
-            rigid.AddForce(Vector3.up * 10, ForceMode.Impulse);
+            rigid.AddForce(Vector3.up * 17, ForceMode.Impulse);
             isjump = true;
         }
     }
@@ -33,6 +33,11 @@ public class player : MonoBehaviour
         if(c.gameObject.tag == "f")
         {
             isjump = false;
+        }
+
+        if (c.gameObject.tag == "e")
+        {
+            transform.position =new Vector3(0, 10, 0);
         }
     }
 }
